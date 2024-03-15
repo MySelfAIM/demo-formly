@@ -1,0 +1,11 @@
+<p>{{ field.props.label }}</p>
+<form [formGroup]="sectionForm">
+  <formly-form
+    class="section"
+    [fields]="fields"
+    [formGroup]="sectionForm"
+    [model]="sectionModel"
+  ></formly-form>
+
+  <button class="mat-button" buton="button" (click)="addField()">Add</button>
+</form>
