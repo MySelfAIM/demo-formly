@@ -24,7 +24,31 @@ import { FormlyMaterialModule } from '@ngx-formly/material';
 export class SectionComponent extends FieldType<FieldTypeConfig> {
   sectionForm = new FormGroup({});
   sectionModel = {};
-  fields: FormlyFieldConfig[] = [];
+  fields: FormlyFieldConfig[] = [
+    {
+      fieldGroupClassName: `display-flex`,
+      fieldGroup: [
+        {
+          key: 'input_0',
+          type: 'input',
+          className: 'flex-1',
+          props: {
+            label: 'input 0',
+            placeholder: 'Enter input',
+          },
+        },
+        {
+          key: 'input_0',
+          type: 'input',
+          className: 'flex-1',
+          props: {
+            label: 'input 0',
+            placeholder: 'Enter input',
+          },
+        },
+      ],
+    },
+  ];
   cont = 0;
 
   addField() {
@@ -35,12 +59,13 @@ export class SectionComponent extends FieldType<FieldTypeConfig> {
       props: {
         label: 'input ' + this.cont,
         placeholder: 'Enter input',
-        
+
         // required: true,
       },
     };
-    this.fields = [...this.fields, child];
+    // this.fields = [...this.fields, child];
     this.cont++;
-    console.log(this.fields);
+    this.fields[0].fieldGroup?.push(child);
+    console.log(this.fields[0].fieldGroup);
   }
 }
