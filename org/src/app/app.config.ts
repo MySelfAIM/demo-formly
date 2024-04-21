@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       FormlyMaterialModule,
       FormlyModule.forRoot({
-        types: [{ name: `section`, component: SectionComponent }],
+        wrappers: [{ name: `section`, component: SectionComponent }],
       })
     ),
   ],

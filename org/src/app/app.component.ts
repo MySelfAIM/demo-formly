@@ -23,10 +23,10 @@ export class AppComponent {
   model = {};
   fields: FormlyFieldConfig[] = [
     {
-      key: 'section',
-      type: 'section',
+      key: 'mail',
+      type: 'input',
       props: {
-        label: 'Section',
+        label: 'Mail',
       },
     },
     {
