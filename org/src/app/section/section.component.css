@@ -1,0 +1,12 @@
+org-section {
+  .fields {
+    formly-group {
+      display: flex;
+      gap: 1rem;
+
+      formly-field {
+        flex: 1;
+      }
+    }
+  }
+}

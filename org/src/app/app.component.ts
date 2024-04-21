@@ -31,8 +31,45 @@ export class AppComponent {
         required: true,
       },
     },
+    {
+      wrappers: ['section'],
+      props: {
+        label: 'My section',
+      },
+      fieldGroup: [
+        {
+          key: 'name',
+          type: 'input',
+          props: {
+            label: 'User name',
+            placeholder: 'User name',
+            required: true,
+          },
+        },
+        {
+          key: 'Textarea',
+          type: 'textarea',
+          props: {
+            label: 'Textarea',
+            placeholder: 'Placeholder',
+            description: 'Description',
+            required: true,
+          },
+        },
+        {
+          key: 'email',
+          type: 'input',
+          props: {
+            label: 'User surname',
+            placeholder: 'user surname',
+            required: true,
+          },
+        },
+      ],
+    },
   ];
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSubmit(model: any) {
     console.log(model);
   }
