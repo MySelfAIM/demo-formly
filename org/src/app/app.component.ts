@@ -20,15 +20,13 @@ export class AppComponent {
   title = 'org';
 
   form = new FormGroup({});
-  model = { email: 'email@gmail.com' };
+  model = {};
   fields: FormlyFieldConfig[] = [
     {
-      key: 'email',
-      type: 'input',
+      key: 'section',
+      type: 'section',
       props: {
-        label: 'Email address',
-        placeholder: 'Enter email',
-        required: true,
+        label: 'Section',
       },
     },
     {
